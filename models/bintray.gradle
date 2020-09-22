@@ -1,0 +1,29 @@
+apply plugin: 'com.jfrog.bintray'
+
+version = '1.0.1'
+
+
+// Bintray
+bintray {
+    user = 'gunjanddave'
+    key = '2e0781beb7d3001d39ab6c7609e1b9dc60a654a5'
+
+    pkg {
+        configurations = ['archives']
+        publish = true
+        publicDownloadNumbers = true
+        repo = 'VoskAPI-Kaldi-Model'
+        name = 'com.kaldi.models'
+        description 'Vosk API Model for Android Demo'
+        version {
+            name = '1.0.1'
+            description 'Vosk API Model for Android Demo'
+            released = new Date()
+            vcsTag = '1.0.1'
+        }
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/gunjanddave/vosk-android-demo.git'
+        websiteUrl = 'https://github.com/gunjanddave/vosk-android-demo'
+    }
+}

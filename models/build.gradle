@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'
 
 android {
     compileSdkVersion 29
@@ -13,3 +15,4 @@ android {
 ant.importBuild 'assets.xml'
 preBuild.dependsOn(list, checksum)
 clean.dependsOn(clean_assets)
+

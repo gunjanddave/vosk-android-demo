@@ -1,0 +1,40 @@
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'android-maven'
+
+group = 'com.kaldi.models'
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.kaldi.models'
+                artifactId 'VoskAPI-Kaldi-Model'
+                name 'VoskAPI-Kaldi-Model'
+                description 'VOSK Api Kaldi Model'
+                url 'https://github.com/gunjanddave/vosk-android-demo'
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'gunjanddave'
+                        name 'Gunjan Dave'
+                        email 'gunjan.dave@outlook.com'
+                    }
+                }
+
+                scm {
+                    connection 'https://github.com/gunjanddave/vosk-android-demo.git'
+                    developerConnection 'https://github.com/gunjanddave/vosk-android-demo.git'
+                    url 'https://github.com/gunjanddave/vosk-android-demo'
+                }
+            }
+        }
+    }
+}
